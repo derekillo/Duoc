@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plasmadeck"
+version = "0.1.0"
+description = "A modular KDE Plasma desktop dashboard built with Python, Qt6 and PySide6."
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [{name = "PlasmaDeck contributors"}]
+keywords = ["kde", "plasma", "dashboard", "pyside6", "linux"]
+dependencies = ["PySide6>=6.7", "psutil>=5.9"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+plasmadeck = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+packages = ["app", "app.ui", "app.widgets", "app.modules", "app.services", "app.themes", "app.config", "app.utils"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
