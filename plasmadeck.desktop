@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=PlasmaDeck
+Comment=Modular KDE Plasma dashboard
+Exec=plasmadeck
+Icon=plasmadeck
+Terminal=false
+Categories=Utility;System;Monitor;Qt;KDE;
+StartupNotify=false
+X-KDE-RunOnDiscreteGpu=false
